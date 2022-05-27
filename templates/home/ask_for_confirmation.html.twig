@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="col-md-6">
+        <div class="my-5 text-center text-xl-start">
+            <h1 class="display-5 fw-bolder text-white mb-2"><i class="fa-solid fa-child-reaching"></i> {{ "Hi!"|trans }} <small>{{ "Read
+            me please"|trans }}</small></h1>
+            <p class="lead fw-normal text-white-50 mb-4">
+                {{ "This link is going to be destroyed once you open it, so please be carefull by clicking on the \"Continue\" button."|trans }}<br/>
+                {{ "Once you click the \"Continue\" button, you are going to get the content in read only, you can of course copy it as any text."|trans }}<br/>
+                {{ "Now you can click the \"Continue\" button if you still want it."|trans }}
+            </p>
+        </div>
+    </div>
+    <div class="col-md-6 text-white text-center">
+     <a href="{{ url('link_open_confirmed',{link:content.link}) }}" class="btn btn-warning btn-lg">{{ "Continue"|trans }}</a>
+    </div>
+{% endblock %}
+
+{% block title %}
+
+{% endblock %}
+

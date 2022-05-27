@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="col-md-6">
+        <div class="my-5 text-center text-xl-start">
+            <h1 class="display-5 fw-bolder text-white mb-2"><i class="fa-solid fa-child-reaching"></i> {{ "Content"|trans }} </h1>
+            <textarea class="form-control copy-clipboard" style="min-height:200px;" readonly data-to-copy="{{ content.content }}"
+                      data-copy-text="{{ 'You copied the content!'|trans }}"
+                      data-copy-title="{{ "Well done!"|trans }}"
+                      title="{{ "Click to copy"|trans }}">{{ content.content }}</textarea>
+        </div>
+    </div>
+    <div class="col-md-6 text-white text-center">
+        {{ "Thank you for using us."|trans }}
+    </div>
+{% endblock %}
+
+{% block title %}
+
+{% endblock %}
+

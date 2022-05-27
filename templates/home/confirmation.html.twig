@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="col-md-6">
+        <div class="my-5 text-center text-xl-start">
+            <h1 class="display-5 fw-bolder text-white mb-2">{{ "Your link"|trans }}</h1>
+            <p class="lead fw-normal text-white-50 mb-4">{{ "This is your link:"|trans }} </p>
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" readonly value="{{ url('link_open_confirmation',{'link':content.link}) }}">
+                <span data-copy-text="{{ 'You copied the link!'|trans }}" data-copy-title="{{ "Good job!"|trans }}" title="{{ "Click to copy"|trans }}" class="input-group-text copy-clipboard" data-to-copy="{{ url('link_open_confirmation',{'link':content.link}) }}"><i class="fas fa-copy"></i></span>
+            </div>
+
+
+            {#            <div c
+            lass="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-start"> #}
+            {#                <a class="btn btn-primary btn-lg px-4 me-sm-3" href="#features">Get Started</a> #}
+            {#                <a class="btn btn-outline-light btn-lg px-4" href="#!">Learn More</a> #}
+            {#            </div> #}
+        </div>
+    </div>
+    <div class="col-md-6 text-white">
+        <fieldset>
+            <legend>{{ "Content preview"|trans }} {% if content.expirationDate is not null %}<small>, {{ "expiration on %date"|trans|replace({"%date%":content.expirationDate.format('Y-m-d H:i')}) }} </small>{% endif %}</legend>
+            {{ content.content }}
+        </fieldset>
+    </div>
+
+{% endblock %}
+
+{% block title %}
+
+{% endblock %}
+

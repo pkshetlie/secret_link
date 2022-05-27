@@ -1,19 +1,81 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
-        {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
-        {% block stylesheets %}
-            {{ encore_entry_link_tags('app') }}
-        {% endblock %}
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Welcome!{% endblock %}</title>
+    <link rel="icon"
+          href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
+    {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
+    {% block stylesheets %}
+        {{ encore_entry_link_tags('app') }}
+    {% endblock %}
 
-        {% block javascripts %}
-            {{ encore_entry_script_tags('app') }}
-        {% endblock %}
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-    </body>
+    {% block javascripts %}
+        {{ encore_entry_script_tags('app') }}
+    {% endblock %}
+</head>
+<body>
+<main class="flex-shrink-0">
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container px-5">
+            <a class="navbar-brand" href="/"><img src="/logo.png" alt="logo" style="max-height:30px;" class="img-fluid" /> Secret link</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span>
+            </button>
+            <ul class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdownBlog" href="#" role="button"
+                           data-bs-toggle="dropdown" aria-expanded="false">
+                            {% if app.request.locale == 'en' %}
+                                <img height="20px" src="https://twemoji.maxcdn.com/v/13.1.0/svg/1f1ec-1f1e7.svg" alt="fr"/>
+                            {% endif %}
+
+                            {% if app.request.locale == 'fr' %}
+                                <img height="20px" src="https://twemoji.maxcdn.com/v/13.1.0/svg/1f1eb-1f1f7.svg" alt="fr"/>
+                            {% endif %}
+
+                        </a>
+
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownBlog">
+                            {% if app.request.locale != 'en' %}
+                                <li><a class="dropdown-item" href="{{ url("change_locale",{locale:"en"}) }}">
+                                        <img height="20px" src="https://twemoji.maxcdn.com/v/13.1.0/svg/1f1ec-1f1e7.svg" alt="fr"/> English
+                                    </a></li>
+                            {% endif %}
+                            {% if app.request.locale != 'fr' %}
+                                <li><a class="dropdown-item" href="{{ url("change_locale",{locale:"fr"}) }}">
+                                        <img height="20px" src="https://twemoji.maxcdn.com/v/13.1.0/svg/1f1eb-1f1f7.svg" alt="fr"/> Français
+                                    </a></li>
+                            {% endif %}
+
+                        </ul>
+
+                    </li>
+
+                </ul>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header class="bg-dark py-5">
+        <div class="container px-5">
+            <div class="row gx-5 align-items-center justify-content-center">
+                {% for label, messages in app.flashes %}
+                    {% for message in messages %}
+                        <div class="alert d-none" data-type="{{ label }}" data-title="{{ label|trans }}">
+                            {{ message|trans }}
+                        </div>
+                    {% endfor %}
+                {% endfor %}
+
+
+                {% block body %}{% endblock %}
+            </div>
+        </div>
+    </header>
+</main>
+</body>
 </html>

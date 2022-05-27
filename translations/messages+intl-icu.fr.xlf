@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="fr" target-language="fr" datatype="plaintext" original="file.ext">
+    <header>
+      <tool tool-id="symfony" tool-name="Symfony"/>
+    </header>
+    <body>
+      <trans-unit id="pi9yJBJ" resname="This link is not available anymore!">
+        <source>This link is not available anymore!</source>
+        <target>Ce lien n'est plus disponible !</target>
+      </trans-unit>
+      <trans-unit id="ylHOH7F" resname="Hi!">
+        <source>Hi!</source>
+        <target>Bonjour !</target>
+      </trans-unit>
+      <trans-unit id="BDRgf.F" resname="Read&#10;            me please">
+        <source>Read
+            me please</source>
+        <target>Lisez moi svp</target>
+      </trans-unit>
+      <trans-unit id="yVyy8TO" resname="This link is going to be destroyed once you open it, so please be carefull by clicking on the &quot;Continue&quot; button.">
+        <source>This link is going to be destroyed once you open it, so please be carefull by clicking on the "Continue" button.</source>
+        <target>Ce lien sera détruit une fois ouvert donc soyez prudent en cliquant sur "Continuer".</target>
+      </trans-unit>
+      <trans-unit id="Km0.BUo" resname="Once you click the &quot;Continue&quot; button, you are going to get the content in read only, you can of course copy it as any text.">
+        <source>Once you click the "Continue" button, you are going to get the content in read only, you can of course copy it as any text.</source>
+        <target>Dès que vous aurez cliqué sur le bouton "Continuer vous aurez accès au contenu en lecture seule. Vous pourrez bien sur copier ce dernier comme n'importe quel texte.</target>
+      </trans-unit>
+      <trans-unit id="__m059S" resname="Now you can click the &quot;Continue&quot; button if you still want it.">
+        <source>Now you can click the "Continue" button if you still want it.</source>
+        <target>Maintenant vous pouvez cliquer sur "Continuer" si vous le souhaitez toujours..</target>
+      </trans-unit>
+      <trans-unit id="MfvvFiW" resname="Continue">
+        <source>Continue</source>
+        <target>Continuer</target>
+      </trans-unit>
+      <trans-unit id="Cv25vPh" resname="Your link">
+        <source>Your link</source>
+        <target>Votre lien</target>
+      </trans-unit>
+      <trans-unit id="iMEMWL0" resname="This is your link:">
+        <source>This is your link:</source>
+        <target>Voici votre lien :</target>
+      </trans-unit>
+      <trans-unit id="CtDZoIs" resname="You copied the link!">
+        <source>You copied the link!</source>
+        <target>Vous avez copié le lien !</target>
+      </trans-unit>
+      <trans-unit id="ULwTPgV" resname="Good job!">
+        <source>Good job!</source>
+        <target>Bien joué !</target>
+      </trans-unit>
+      <trans-unit id="b9uPYLJ" resname="Click to copy">
+        <source>Click to copy</source>
+        <target>Cliquer pour copier</target>
+      </trans-unit>
+      <trans-unit id="MfZ7EC8" resname="Content preview">
+        <source>Content preview</source>
+        <target>Aperçu du contenu</target>
+      </trans-unit>
+      <trans-unit id="uG.euHo" resname="expiration on %date">
+        <source>expiration on %date</source>
+        <target>Expire le %date</target>
+      </trans-unit>
+      <trans-unit id="R70pB1_" resname="Content">
+        <source>Content</source>
+        <target>Contenu</target>
+      </trans-unit>
+      <trans-unit id="k7dMr9z" resname="You copied the content!">
+        <source>You copied the content!</source>
+        <target>Vous avez copier le contenu !</target>
+      </trans-unit>
+      <trans-unit id="RiFkoGR" resname="Well done!">
+        <source>Well done!</source>
+        <target>Bien joué !</target>
+      </trans-unit>
+      <trans-unit id="bt11Lwd" resname="Thank you for using us.">
+        <source>Thank you for using us.</source>
+        <target>Merci d'utiliser notre service.</target>
+      </trans-unit>
+      <trans-unit id="GN30T.E" resname="Secret link">
+        <source>Secret link</source>
+        <target>Lien secret</target>
+      </trans-unit>
+      <trans-unit id="GN30T.R" resname="Create link">
+        <source>Create link</source>
+        <target>Créer le lien</target>
+      </trans-unit>
+      <trans-unit id="AJhdgm2" resname="The link containing your content can be opened only one time,&#10;            then it's destroyed.">
+        <source>The link containing your content can be opened only one time,
+            then it's destroyed.</source>
+        <target>Le lien contenant votre contenu ne pourra être ouvert qu'une seule fois.</target>
+      </trans-unit>
+      <trans-unit id="bGksXqg" resname="Even us can't get it back for you.">
+        <source>Even us can't get it back for you.</source>
+        <target>Même nous ne pouvons pas récupérer ce contenu une fois lu.</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

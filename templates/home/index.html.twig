@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Secret link{% endblock %}
+
+{% block body %}
+
+    <div class="col-md-6">
+        <div class="my-5 text-center text-xl-start">
+            <h1 class="display-5 fw-bolder text-white mb-2">{{ "Secret link" }}</h1>
+            <p class="lead fw-normal text-white-50 mb-4">{{"The link containing your content can be opened only one time,
+            then it's destroyed."|trans}}<br/>
+                {{ "Even us can't get it back for you."|trans}}</p>
+
+        </div>
+    </div>
+    <div class="col-md-6 text-white">
+        {{ form(form) }}
+    </div>
+
+
+</div>
+</div>
+
+{% endblock %}
